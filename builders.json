@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "karma": {
+      "implementation": "./src/builder/karma",
+      "schema": "./src/builder/karma/schema.json",
+      "description": "Extensible Builder using karma"
+    }
+  }
+}
