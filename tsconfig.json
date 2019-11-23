@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "rootDir": ".",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "inlineSourceMap": true,
+    "sourceRoot": ".",
+    "inlineSources": true,
+    "strictNullChecks": true,
+    "target": "es2016",
+    "lib": [
+      "es2017"
+    ],
+    "baseUrl": "",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+  },
+  "bazelOptions": {
+    "suppressTsconfigOverrideWarnings": true
+  },
+  "exclude": [
+    "bazel-*/**/*",
+    "dist/**/*",
+    "node_modules/**/*",
+    "packages/_/devkit/**/*files/**/*",
+    "packages/schematics/*/*/*files/**/*",
+    "tmp/**/*",
+    "scripts/patches/**/*",
+    "tests/**/*"
+  ]
+}
