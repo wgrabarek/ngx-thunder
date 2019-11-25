@@ -20,27 +20,13 @@
     "strictNullChecks": true,
     "target": "es2016",
     "lib": [
-      "es2017"
+      "es2015"
     ],
-    "baseUrl": "",
+    "baseUrl": ".",
+    "types": [ "node", "mocha", "chai"],
     "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ],
+      "./node_modules/@types/chai","./node_modules/@types/mocha","./node_modules/@types/node"
+    ]
   },
-  "bazelOptions": {
-    "suppressTsconfigOverrideWarnings": true
-  },
-  "exclude": [
-    "bazel-*/**/*",
-    "dist/**/*",
-    "node_modules/**/*",
-    "packages/_/devkit/**/*files/**/*",
-    "packages/schematics/*/*/*files/**/*",
-    "tmp/**/*",
-    "scripts/patches/**/*",
-    "tests/**/*"
-  ]
+  "include": [ "src/**/*.ts" ]
 }

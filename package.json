@@ -8,8 +8,45 @@
     "type": "git",
     "url": "https://github.com/wgrabarek/ngx-thunder"
   },
+  "scripts": {
+    "build": "tsc -p .",
+    "test:s": "mocha --require ts-node/register schematics/**/*.spec.ts --watch --watch-extensions ts",
+    "test:t": "mocha --require ts-node/register src/**/*.spec.ts --watch --watch-extensions ts",
+    "test": "npm run test:s && npm run test:t",
+    "test:ci": "mocha --require ts-node/register schematics/**/*.spec.ts && mocha --require ts-node/register src/**/*.spec.ts"
+  },
   "builders": "builders.json",
+  "schematics": "schematics/collection.json",
   "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.19",
+    "@types/chai": "^4.2.5",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.12",
+    "dedent": "^0.7.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "mocha-logger": "^1.0.6",
+    "prettier": "^1.19.1",
+    "rxjs": "^6.5.3",
+    "ts-node": "^8.5.2",
+    "tslint": "^5.20.1",
     "typescript": "^3.7.2"
+  },
+  "peerDependencies": {
+    "@angular-devkit/build-angular": ">=0.800.0",
+    "rxjs": ">= 6.0.0"
+  },
+  "dependencies": {
+    "@angular-devkit/architect": "^0.803.19",
+    "@angular-devkit/core": "^8.3.19",
+    "@angular-devkit/schematics": "^8.3.19",
+    "@angular/compiler": "^8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
+    "@ngtools/webpack": "^8.3.19",
+    "webpack": "^4.41.2"
+  },
+  "engines": {
+    "node": ">= 10.9.0",
+    "npm": ">= 6.2.0"
   }
 }
