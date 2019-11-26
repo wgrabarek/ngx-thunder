@@ -10,10 +10,8 @@
   },
   "scripts": {
     "build": "tsc -p .",
-    "test:s": "mocha --require ts-node/register schematics/**/*.spec.ts --watch --watch-extensions ts",
-    "test:t": "mocha --require ts-node/register src/**/*.spec.ts --watch --watch-extensions ts",
-    "test": "npm run test:s && npm run test:t",
-    "test:ci": "mocha --require ts-node/register schematics/**/*.spec.ts && mocha --require ts-node/register src/**/*.spec.ts"
+    "test:watch": "mocha --require ts-node/register **/*.spec.ts --watch --watch-extensions ts",
+    "test": "mocha --require ts-node/register **/*.spec.ts"
   },
   "builders": "builders.json",
   "schematics": "schematics/collection.json",
